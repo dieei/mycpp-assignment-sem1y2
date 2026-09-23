@@ -1,3 +1,4 @@
+
 # Ignore Windows executable files
 *.exe
 *.lnk
@@ -9,3 +10,7 @@
 
 # Ignore VS Code configuration files (Optional)
 .vscode/
+
+*.exe
+*.swp
+
