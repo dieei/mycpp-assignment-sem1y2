@@ -6,7 +6,7 @@
 */
 
 #include<iostream>
-
+#include<string>
 using namespace std;
 
 int main (void){
@@ -17,7 +17,7 @@ int main (void){
    string testResults;
 
    cout << "Enter the students name: "<<endl;
-   cin >>studentName;
+   getline(cin,studentName);
 
    cout << "Enter theory test marks: "<<endl;
    cin >>theoryMarks;

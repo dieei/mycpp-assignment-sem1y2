@@ -1,4 +1,12 @@
+/*
+	GRADING SYSTEM
+	STUDENT NAME: Patrick Njuguna Wangui
+	REGISTRATION NUMBER: CT101/G/26598/25
+
+*/
+
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -7,8 +15,9 @@ int main (void){
      string studentName;
      int examMarks;
      string testResults;
+
      cout << "Enter the students name: "<<endl;
-     cin >>studentName;
+     getline(cin,studentName);
 
      cout << "Enter the students exam marks: "<<endl;
      cin >>examMarks;

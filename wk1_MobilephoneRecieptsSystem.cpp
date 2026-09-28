@@ -1,12 +1,13 @@
    /*
 
-   MOBILE PHONE SALES RECEIPT SYSTEM 
-   Student name: patrick njuguna 
+          MOBILE PHONE SALES RECEIPT SYSTEM 
+   Student name: Patrick Njuguna 
    Registration number: CT101/G/26598/25 
 */ 
 
 
 #include <iostream> 
+#include <string>
 using namespace std; 
 
 int main(void) { 
@@ -18,10 +19,10 @@ int main(void) {
     float totalSalesAmount; 
 
     cout << "Enter customer's name: " << endl; 
-    cin >> customerName; 
+    getline(cin, customerName); 
 
     cout << "Enter the phone model purchased: " << endl; 
-    cin >> phoneModelPurchased; 
+    getline(cin,phoneModelPurchased); 
 
     cout << "Enter the price per phone: " << endl; 
     cin >> pricePerPhone; 

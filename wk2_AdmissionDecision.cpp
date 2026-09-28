@@ -5,6 +5,7 @@ Regestration number:  CT101/G/26598/25
 */
 
 #include <iostream>
+#include <string>   
 using namespace std;
 
 
@@ -13,7 +14,7 @@ int main (){
    int age, examScore;
 
    cout<<"Enter students name: ";
-   cin>>name;
+   getline(cin, name);
 
    cout<<"Enter student age: ";
    cin>>age;
@@ -22,7 +23,7 @@ int main (){
    cin>>examScore;
      //admision logic
    if(age >= 18){
-       if(examScore >+ 50){
+       if(examScore >= 50){
            admission = "Admitted";
        }
        else{
