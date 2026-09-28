@@ -5,50 +5,61 @@
 
 */
 #include<iostream>
+#include<string>
 
 using namespace std;
 //prototypes
-void getCustomerDetails(string cusName, float unitsUsed);
+void getCustomerDetails(string &cusName, float &unitsUsed);
 float calculateBill(float unitsUsed, float ratePerUnit);
-float applyDiscount(float waterBill);
+float applyDiscount(float waterBill, float unitsUsed);
 void displayBill(string name, float unitsUsed, float waterBill, float discount, float disBill);
 
 
 int main (){
 
-       getCustomerDetails();
-       calculateBill();
-       applyDiscount();
-       displayBill();
+	string name;
+	float unitsUsed, ratePerUnit = 50.0, waterBill, discount, disBill;
+       //geting user input
+       getCustomerDetails(name, unitsUsed);
 
-             return 0;Lwq
+	   //calculating the bill and discount
+       waterBill = calculateBill(unitsUsed, ratePerUnit);
+       discount = applyDiscount(waterBill, unitsUsed);
+	   
+	   //calculating the final bill after discount
+       disBill = waterBill - discount;
+
+       //dispalying the bill
+       displayBill(name, unitsUsed, waterBill, discount, disBill);
+
+             return 0;
 
 }
 
-void getCustomerDetails(string cusName, float unitsUsed)){
+void getCustomerDetails(string &cusName, float &unitsUsed){
          cout<<"Enter the custmers name: ";
-         cin>>cusName;
+         getline(cin,cusName);
 
          cout<<"Enter the units consumed: ";
          cin>>unitsUsed;
     }
 
 float calculateBill(float unitsUsed, float ratePerUnit){
-         float waterBill = unitsUsed * ratePerUnit;
-         return waterBill;
+         return unitsUsed * ratePerUnit;
+        
     }
 
-float applyDiscount(float waterBill){
-            float discount;
+float applyDiscount(float waterBill, float unitsUsed){
+            float discount =0.0;
             if (unitsUsed > 100){
-             discount = waterBill * 0.1;
+             discount = waterBill * 0.10f;
             }
             return discount;
     }
 void displayBill(string name, float unitsUsed, float waterBill, float discount, float disBill){
         cout<< "Customer name:              "<<name<<"\n"
             << "Units consumed :            "<<unitsUsed<<"\n"
-            << "Total Bill before discount: "<<waterBill<"\n"
+            << "Total Bill before discount: "<<waterBill<<"\n"
             << "Discount:                   "<<discount<<"\n\n"
             << "Final amount payable:       "<<disBill<<endl;
 
