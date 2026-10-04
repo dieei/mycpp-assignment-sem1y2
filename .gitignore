@@ -1,0 +1,11 @@
+# Ignore Windows executable files
+*.exe
+*.lnk
+
+# Ignore compiler output and objects
+*.o
+*.obj
+*.out
+
+# Ignore VS Code configuration files (Optional)
+.vscode/
